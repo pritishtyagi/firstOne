@@ -1,0 +1,20 @@
+<div class="wrapper">
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="login-form">
+        <mat-form-field appearance="fill">
+            <mat-label for="login-user-name">USERNAME</mat-label>
+            <input id="login-user-name" (change) = 'logValues()' matInput type="text" formControlName="userName">
+            <mat-error>Username is required</mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label for="login-user-email">EMAIL</mat-label>
+            <input id="login-user-email" (change) = 'logValues()' matInput type="email" formControlName="userEmail">
+            <mat-error>Put a valid email address</mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label for="login-user-password">PASSWORD</mat-label>
+            <input id="login-user-password" (change) = 'logValues()' matInput type="password" formControlName="userPassword">
+            <mat-error>Put a valid password eg:Abc@123</mat-error>
+        </mat-form-field>
+        <button [disabled] = "loginForm.invalid"  (click)="toggleForm()" class="login-btn" mat-flat-button color="primary" type="submit">LOG IN</button>
+    </form>
+</div>

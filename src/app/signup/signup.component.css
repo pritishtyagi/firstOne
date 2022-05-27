@@ -1,0 +1,30 @@
+.wrapper{
+    width:300px;
+    height:max-content;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.signup-form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+mat-label{
+    font-weight: bold;
+    font-size:13px;
+}
+
+button{
+    height:50px;
+    font-weight: bolder;
+}
+
+input{
+    font-weight: bold;
+}
